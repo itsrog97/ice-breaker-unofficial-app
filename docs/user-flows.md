@@ -30,7 +30,7 @@ flowchart TD
   L --> SU[Sign Up → opens website]
 ```
 
-## 3. Discover → Break the Ice
+## 3. Discover → Burn the Wall
 ```mermaid
 flowchart LR
   D[Discover] -->|type / filter / sort| Q[People search]
@@ -38,7 +38,7 @@ flowchart LR
   G -->|tap tile| P[Profile detail]
   P --> C[GET commonalities → 'Reach out to X to:']
   P -->|Save| S[Save / unsave]
-  P -->|Break the Ice| B[Open or create conversation]
+  P -->|Burn the Wall| B[Open or create conversation]
   B --> CV[Conversation screen]
 ```
 
@@ -64,7 +64,7 @@ flowchart TD
   U --> ST[Streaming chat request]
   ST --> EV{event}
   EV -- text --> T[Stream into assistant message]
-  EV -- tool_call --> A[Status: 'Searching Icebreaker…']
+  EV -- tool_call --> A[Status: 'Searching your network…']
   EV -- profile_card etc. --> C[Card with View profile]
   EV -- suggestions --> CH[Chips]
 ```

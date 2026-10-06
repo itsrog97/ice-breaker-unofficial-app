@@ -15,7 +15,7 @@ export type SparkBlock =
 
 /** Friendly status text for server-side tool calls (copied from the web client). */
 const TOOL_LABELS: Record<string, string> = {
-  search_network: 'Searching Icebreaker…',
+  search_network: 'Searching your network…',
   get_commonalities: 'Finding what you have in common…',
   draft_icebreaker: 'Drafting an opener…',
   get_profile: 'Reading their profile…',

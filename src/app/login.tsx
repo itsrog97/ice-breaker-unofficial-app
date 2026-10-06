@@ -144,7 +144,7 @@ export default function LoginScreen() {
               <Button title="Forgot Password?" variant="ghost" size="sm" style={styles.center} />
             </Link>
             <AppText variant="caption" tone="tertiary" align="center" style={styles.disclaimer}>
-              Unofficial client. Not affiliated with or endorsed by Icebreaker Connect, Inc.{'\n'}Sign in with your existing Icebreaker account.
+              Connectoo is an unofficial client for the Icebreaker network.{'\n'}Not affiliated with or endorsed by Icebreaker Connect, Inc. Sign in with your existing Icebreaker account.
             </AppText>
           </View>
         </ScrollView>

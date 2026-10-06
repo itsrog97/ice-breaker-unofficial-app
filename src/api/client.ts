@@ -70,7 +70,7 @@ function extractMessage(status: number, body: unknown): string {
       return String((d[0] as { msg: unknown }).msg);
     }
   }
-  if (status >= 500) return 'Icebreaker is having trouble right now. Please try again.';
+  if (status >= 500) return 'Connectoo is having trouble reaching the server. Please try again.';
   return `Request failed (${status})`;
 }
 

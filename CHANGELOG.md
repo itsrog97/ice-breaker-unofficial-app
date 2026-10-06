@@ -1,6 +1,19 @@
 # Changelog
 
-All notable changes to the Icebreaker mobile app. Versions follow `app.json` (`expo.version` / `android.versionCode`).
+All notable changes to Connectoo (formerly “Icebreaker (Unofficial)”), an unofficial mobile client for the Icebreaker network. Versions follow `app.json` (`expo.version` / `android.versionCode`).
+
+## [1.1.0] — 2026-10-06 — Connectoo rebrand
+
+### Changed
+- App renamed to **Connectoo** everywhere: launcher name, in-app wordmark, Login and Settings copy, web demo, docs and design-review PDF. Icebreaker is still named where the app describes the service it connects to and in the disclaimer.
+- The profile's primary action is now **Burn the Wall** (was “Break the Ice”). It's a fiery orange-to-red gradient button with a flame icon. Once you've already messaged someone it still reads **Message** in the brand colour.
+- Android package ID changed to `io.github.itsrog97.connectoo`, deep-link scheme to `connectoo://`; versionCode 3. Installs alongside v1.0.0; uninstall the old app.
+
+### Added
+- `expo-linear-gradient` for the new button.
+
+### Testing
+Typecheck ✅, Jest 45/45 ✅. Web demo end-to-end: 16/16 checks (including Burn the Wall → conversation → send). Light and dark mode checked visually. APK not re-tested on a device.
 
 ## [1.0.0] — 2026-10-06 — first public release (unofficial client)
 

@@ -44,7 +44,7 @@ export default function PersonScreen() {
   const reasons = common.data?.reasons_to_connect ?? [];
   const visibleReasons = showAllReasons ? reasons : reasons.slice(0, 3);
 
-  const breakTheIce = async () => {
+  const burnTheWall = async () => {
     try {
       const convo = await start.mutateAsync(p.id);
       router.push({ pathname: '/conversation/[id]', params: { id: convo.id } });
@@ -163,9 +163,10 @@ export default function PersonScreen() {
             accessibilityLabel={isSaved ? 'Remove from saved' : 'Save for later'}
           />
           <Button
-            title={p.has_messaged ? 'Message' : 'Break the Ice'}
-            icon={p.has_messaged ? 'chatbubble-ellipses-outline' : 'cube-outline'}
-            onPress={breakTheIce}
+            title={p.has_messaged ? 'Message' : 'Burn the Wall'}
+            icon={p.has_messaged ? 'chatbubble-ellipses-outline' : 'flame'}
+            variant={p.has_messaged ? 'primary' : 'fire'}
+            onPress={burnTheWall}
             loading={start.isPending}
             disabled={p.can_message === false}
             style={{ flex: 1.6, paddingHorizontal: spacing.md }}

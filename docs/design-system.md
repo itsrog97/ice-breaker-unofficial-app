@@ -1,4 +1,4 @@
-# Design System
+# Design System — Connectoo
 
 Tokens are taken from the website's CSS custom properties (`:root` / `.dark`) and live in `src/theme/tokens.ts`. Components read colours through `useTheme()` so light and dark themes switch at runtime.
 
@@ -48,7 +48,7 @@ Text scales with the OS font size (capped at 1.6×).
 | Component | Variants / notes |
 |---|---|
 | `AppText` | `variant` × `tone` (primary, secondary, tertiary, brand, error, success, onBrand) |
-| `Button` | primary (brand fill + shadow), secondary, outline, ghost, danger, dangerOutline; sizes md (52 dp) / sm (36 dp pill); loading & disabled states |
+| `Button` | primary (brand fill + shadow), secondary, outline, ghost, danger, dangerOutline, **fire** (orange `#ff7a00` → `#e8400c` → red `#c81d0e` diagonal gradient, white label, flame icon — used only for the “Burn the Wall” call to action, same in light and dark); sizes md (52 dp) / sm (36 dp pill); loading & disabled states |
 | `TextField` | label, error, focus ring (brand), optional show/hide password toggle |
 | `Avatar` | Cloudinary-resized image, initials fallback, green active dot, "NEW" pill |
 | `ProfileTile` | Circular avatar + name / school (brand) / company (grey) — Discover grid & Home carousels |

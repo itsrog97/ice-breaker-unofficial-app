@@ -1,7 +1,9 @@
-# Icebreaker Mobile — Product Specification
+# Connectoo — Product Specification
+
+> Connectoo is the name of this unofficial mobile client; Icebreaker is the web product and network it connects to.
 
 ## Objective
-Turn the Icebreaker web experience (MBA networking: discover people, break the ice, message, AI assistant) into a mobile-first native app, starting with an Android test build, on a codebase that also ships to iOS, tablets and Chromebooks.
+Turn the Icebreaker web experience (MBA networking: discover people, break the ice, message, AI assistant) into **Connectoo**, a mobile-first native app, starting with an Android test build, on a codebase that also ships to iOS, tablets and Chromebooks.
 
 ## Target platforms
 - **Phase 1:** Android phones (API 24+), installable APK for testing.
@@ -20,7 +22,7 @@ Libraries: TanStack Query (caching, polling, retries, offline pause), expo-image
 | Auth | Login with validation & server errors, show/hide password, forgot password request, sign-up link to website, secure token storage, session persistence, silent token refresh, expiry → login with notice, logout |
 | Home | Match of the Day, project & "ask me about this" story carousels, people carousels, pull-to-refresh, error/retry |
 | Discover | Search, filters (Industry, Areas of Interest, School, Goals, Advice They Can Give), sort (Relevance/Newest), infinite scroll, empty state |
-| Profile detail | Photo, headline, icebreaker quote, reasons to connect, commonalities, full sections, Save/Saved, Break the Ice → conversation |
+| Profile detail | Photo, headline, icebreaker quote, reasons to connect, commonalities, full sections, Save/Saved, Burn the Wall → conversation |
 | Chat | Channels (joined + joinable, unread badges, Join), direct messages (search, unread), conversation view (read, send, mark read, 4 s polling), channel view (read, post, reactions/link previews/images display) |
 | Spark | Session history, streaming replies, suggestion chips, tool-status line, structured cards with "View profile" |
 | Notifications | List, unread state, tap-to-navigate, mark read / mark all read, unread badge |
@@ -32,7 +34,7 @@ Libraries: TanStack Query (caching, polling, retries, offline pause), expo-image
 - Native profile editing (sections, experiences, photo upload with camera/gallery), onboarding.
 - Push notifications (Expo Notifications / FCM) and deep links from notifications.
 - Channel threads, reactions (add/remove), message edit/delete, image/GIF posting, @mentions.
-- AI assists: "Ideas to Break the Ice", "Suggest Reply", "Politely decline".
+- AI assists: opener ideas (the website’s "Ideas to Break the Ice"), "Suggest Reply", "Politely decline".
 - "Interested" on projects, "Tell me more" drafts, prev/next profile swiping, Location & Company filters.
 - Persisted query cache (instant Home on cold start), blocked users, delete account, report.
 - iOS build, signed Play Store AAB, crash reporting.

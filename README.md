@@ -1,10 +1,10 @@
 <p align="center"><img src="assets/app-icon.png" width="96" alt="App icon"></p>
 
-<h1 align="center">Icebreaker — unofficial Android app</h1>
+<h1 align="center">Connectoo — an unofficial Android app for the Icebreaker network</h1>
 
-<p align="center"><b>A product-management case study:</b> auditing a web product, specifying a mobile MVP, and shipping a working Android app (v1.0.0) on React Native + Expo.</p>
+<p align="center"><b>A product-management case study:</b> auditing a web product, specifying a mobile MVP, and shipping a working Android app (v1.1.0) on React Native + Expo.</p>
 
-> **Disclaimer.** This is an independent, unofficial portfolio project. It is **not affiliated with, endorsed by or sponsored by Icebreaker Connect, Inc.** “Icebreaker” is used only to describe the service this client connects to. The app uses its own icon and wordmark, contains no Icebreaker artwork, and users sign in with their own existing account. Screenshots use fictional demo data.
+> **Disclaimer.** This is an independent, unofficial portfolio project. It is **not affiliated with, endorsed by or sponsored by Icebreaker Connect, Inc.** **Connectoo** is this project's own name; “Icebreaker” is used only to describe the service the client connects to. The app uses its own name, icon and wordmark, contains no Icebreaker artwork, and users sign in with their own existing account. Screenshots use fictional demo data.
 
 <p align="center">
 <img src="docs/design-review/screens/03_home.png" width="190" alt="Home">
@@ -15,14 +15,14 @@
 
 **▶ Live demo (no install, no account):** https://itsrog97.github.io/ice-breaker-unofficial-app/ — the app's own code running in the browser in a phone frame, on fictional demo data.
 
-**📦 Download the Android APK:** [Icebreaker-Unofficial-v1.0.0.apk](https://github.com/itsrog97/ice-breaker-unofficial-app/raw/main/releases/v1.0.0/Icebreaker-Unofficial-v1.0.0.apk) (Android 7.0+, arm64 phones; side-load, test-key signed; [checksum](releases/v1.0.0/SHA256SUMS.txt)) · [release notes](releases/v1.0.0/RELEASE_NOTES.md) · [design-review PDF](releases/v1.0.0/Icebreaker_Android_UIUX_Review_v1.0.0.pdf)
+**📦 Download the Android APK:** [Connectoo-v1.1.0.apk](https://github.com/itsrog97/ice-breaker-unofficial-app/raw/main/releases/v1.1.0/Connectoo-v1.1.0.apk) (Android 7.0+, arm64 phones; side-load, test-key signed; [checksum](releases/v1.1.0/SHA256SUMS.txt)) · [release notes](releases/v1.1.0/RELEASE_NOTES.md) · [design-review PDF](releases/v1.1.0/Connectoo_Android_UIUX_Review_v1.1.0.pdf) · previous build: [v1.0.0](releases/v1.0.0/)
 
 ---
 
 ## The case study
 
 ### Problem
-Icebreaker is an MBA networking product that ships as a responsive website. On phones, the core loop — *find someone relevant → understand why to talk → start a conversation → keep up with replies* — means fighting a desktop-first layout, a hamburger menu and browser sessions. **Goal:** validate whether a native, mobile-first experience could make that loop faster, without any backend changes.
+Icebreaker is an MBA networking product that ships as a responsive website. On phones, the core loop — *find someone relevant → understand why to talk → start a conversation → keep up with replies* — means fighting a desktop-first layout, a hamburger menu and browser sessions. **Goal:** validate whether a native, mobile-first experience (branded **Connectoo**) could make that loop faster, without any backend changes.
 
 ### Approach
 | Phase | What I did | Output |
@@ -38,16 +38,16 @@ Icebreaker is an MBA networking product that ships as a responsive website. On p
 |---|---|
 | **Bottom tab bar** (Home · Discover · Spark · Chat · Profile) instead of the web's side menu | Thumb reach; unread badge always visible; standard Android pattern |
 | **Bottom-sheet filters** instead of dropdowns | 48 dp touch targets, searchable long lists, closes with Android back |
-| **Full-screen profile with sticky “Break the Ice”** | The primary action is always one tap away while reading |
+| **Full-screen profile with a sticky, fiery “Burn the Wall” button** | The primary action is always one tap away while reading, and its orange-red flame styling makes it the most prominent element on the screen |
 | **Reuse the existing backend, no server work** | Fastest path to validate the mobile hypothesis; risk noted in [backend integration](docs/backend-integration.md) |
 | **Defer** profile editing, threads, reactions, media, push | Highest effort / lowest impact on the core loop — Phase 2 after validation |
 | **Design for failure** (offline banner, retries, empty/error states everywhere) | The audit measured a 6–14 s home feed and intermittent 5xx errors |
 
-### Scope delivered in v1.0.0
-Login & secure session · Home feed · Discover (search, 5 filters, sort, infinite scroll) · Person profile + Break the Ice · Chat (channels + direct messages) · Spark AI assistant (streaming) · Notifications · My Profile · Settings (dark mode, change password) · tablet & Chromebook layouts.
+### Scope delivered in v1.1.0
+Login & secure session · Home feed · Discover (search, 5 filters, sort, infinite scroll) · Person profile + Burn the Wall · Chat (channels + direct messages) · Spark AI assistant (streaming) · Notifications · My Profile · Settings (dark mode, change password) · tablet & Chromebook layouts.
 
 ### What I'd measure next
-Time from app open → first message sent · % of profile views that convert to “Break the Ice” · D7 retention of mobile vs web users · reply rate within 24 h · crash-free sessions.
+Time from app open → first message sent · % of profile views that convert to “Burn the Wall” · D7 retention of mobile vs web users · reply rate within 24 h · crash-free sessions.
 
 ### What I'd do next
 Push notifications (biggest expected lift for reply rate) → native profile editing → AI reply helpers → Play Store beta.
@@ -110,11 +110,11 @@ Without `android/keystore.properties` the release APK is signed with the **debug
 ## Build an AAB (Google Play)
 1. Create an upload key once (keep it and its passwords safe — never commit them):
    ```bash
-   keytool -genkeypair -v -keystore ~/keys/icebreaker-upload.keystore -alias upload -keyalg RSA -keysize 2048 -validity 10000
+   keytool -genkeypair -v -keystore ~/keys/connectoo-upload.keystore -alias upload -keyalg RSA -keysize 2048 -validity 10000
    ```
 2. After `npx expo prebuild`, create `android/keystore.properties` (git-ignored):
    ```properties
-   storeFile=/home/you/keys/icebreaker-upload.keystore
+   storeFile=/home/you/keys/connectoo-upload.keystore
    storePassword=…
    keyAlias=upload
    keyPassword=…

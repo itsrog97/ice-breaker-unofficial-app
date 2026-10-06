@@ -10,16 +10,16 @@ import { AppText } from './AppText';
 const icon = require('../../assets/app-icon.png');
 
 /**
- * App wordmark: original icon + "Icebreaker" set in Inter + an "UNOFFICIAL" tag.
- * This is an independent client; it deliberately does not use Icebreaker's own logo artwork.
+ * App wordmark: original icon + "Connectoo" set in Inter + an "UNOFFICIAL" tag.
+ * Connectoo is an independent client for the Icebreaker network and uses none of Icebreaker's artwork.
  */
 export function Logo({ height = 30 }: { height?: number }) {
   const { colors } = useTheme();
   return (
-    <View style={styles.logo} accessible accessibilityRole="image" accessibilityLabel="Icebreaker (unofficial)">
+    <View style={styles.logo} accessible accessibilityRole="image" accessibilityLabel="Connectoo (unofficial)">
       <Image source={icon} style={{ width: height, height, borderRadius: height * 0.24 }} contentFit="cover" />
       <AppText style={{ fontFamily: fontFamily.bold, fontSize: height * 0.66, lineHeight: height * 0.8, color: colors.brandNavyText }}>
-        icebreaker
+        connectoo
       </AppText>
       <View style={[styles.tag, { borderColor: colors.brandBlue }]}>
         <AppText style={{ fontFamily: fontFamily.semibold, fontSize: Math.max(8, height * 0.28), letterSpacing: 0.6, color: colors.brandBlue }}>

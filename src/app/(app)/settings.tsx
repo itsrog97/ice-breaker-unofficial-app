@@ -108,7 +108,7 @@ export default function SettingsScreen() {
         <Button title="Log Out" variant="dangerOutline" onPress={confirmLogout} style={styles.logout} testID="logout" />
 
         <AppText variant="caption" tone="tertiary" align="center" style={{ marginTop: spacing.xl }}>
-          Unofficial Icebreaker client · v{APP_VERSION}
+          Connectoo · v{APP_VERSION} · unofficial client for Icebreaker
         </AppText>
         <AppText variant="caption" tone="tertiary" align="center">
           Not affiliated with Icebreaker Connect, Inc. Account deletion is available on the website.

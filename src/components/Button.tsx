@@ -1,11 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import { radius, shadows, spacing, touchTarget, typography, useTheme } from '@/theme';
 import { AppText } from './AppText';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'dangerOutline';
+export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'dangerOutline' | 'fire';
 
 export interface ButtonProps {
   title: string;
@@ -44,6 +45,7 @@ export function Button({
     ghost: { bg: 'transparent', fg: colors.brandBlue },
     danger: { bg: colors.error, fg: '#fff' },
     dangerOutline: { bg: 'transparent', fg: colors.error, border: colors.error },
+    fire: { bg: FIRE_GRADIENT[1], fg: '#ffffff' },
   };
   const p = palette[variant];
 
@@ -60,13 +62,23 @@ export function Button({
         styles.base,
         size === 'sm' ? styles.sm : styles.md,
         { backgroundColor: p.bg, borderColor: p.border ?? 'transparent' },
-        variant === 'primary' && shadows.medium,
+        (variant === 'primary' || variant === 'fire') && shadows.medium,
+        variant === 'fire' && styles.fire,
         fullWidth && { alignSelf: 'stretch' },
         pressed && { opacity: 0.85, transform: [{ scale: 0.99 }] },
         isDisabled && { opacity: 0.5 },
         style,
       ]}
     >
+      {variant === 'fire' ? (
+        <LinearGradient
+          colors={FIRE_GRADIENT}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={StyleSheet.absoluteFill}
+          pointerEvents="none"
+        />
+      ) : null}
       {loading ? (
         <ActivityIndicator color={p.fg} />
       ) : (
@@ -81,6 +93,9 @@ export function Button({
   );
 }
 
+/** "Burn the Wall" call to action: hot orange into a fiery red. */
+const FIRE_GRADIENT = ['#ff7a00', '#e8400c', '#c81d0e'] as const;
+
 const styles = StyleSheet.create({
   base: {
     borderWidth: 1,
@@ -91,4 +106,5 @@ const styles = StyleSheet.create({
   md: { minHeight: 52, paddingHorizontal: spacing.xl },
   sm: { minHeight: 36, paddingHorizontal: spacing.lg, borderRadius: radius.pill, minWidth: touchTarget },
   row: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  fire: { overflow: 'hidden', borderWidth: 0 },
 });

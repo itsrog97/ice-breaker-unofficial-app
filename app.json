@@ -1,19 +1,19 @@
 {
   "expo": {
-    "name": "Icebreaker (Unofficial)",
-    "slug": "icebreaker-mobile",
-    "version": "1.0.0",
-    "scheme": "icebreaker",
+    "name": "Connectoo",
+    "slug": "connectoo",
+    "version": "1.1.0",
+    "scheme": "connectoo",
     "orientation": "default",
     "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "io.github.itsrog97.icebreakerunofficial"
+      "bundleIdentifier": "io.github.itsrog97.connectoo"
     },
     "android": {
-      "package": "io.github.itsrog97.icebreakerunofficial",
-      "versionCode": 2,
+      "package": "io.github.itsrog97.connectoo",
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#1c4466",
         "foregroundImage": "./assets/app-icon.png"

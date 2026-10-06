@@ -180,7 +180,7 @@ export default function MessagesScreen() {
           <EmptyView
             icon="chatbubbles-outline"
             title={query ? 'No matches' : 'No conversations yet'}
-            message={query ? 'Try a different name.' : 'Find someone on Discover and tap “Break the Ice”.'}
+            message={query ? 'Try a different name.' : 'Find someone on Discover and tap “Burn the Wall”.'}
           />
         ) : null
       }
