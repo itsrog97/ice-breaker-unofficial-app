@@ -53,3 +53,6 @@ credentials.json
 *.aab
 release/
 dist-demo/
+
+# published test builds
+!releases/**/*.apk

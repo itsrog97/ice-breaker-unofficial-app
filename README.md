@@ -15,7 +15,7 @@
 
 **▶ Live demo (no install, no account):** https://itsrog97.github.io/ice-breaker-unofficial-app/ — the app's own code running in the browser in a phone frame, on fictional demo data.
 
-**📦 Download:** the APK and the design-review PDF are attached to the [v1.0.0 release](../../releases/tag/v1.0.0) (Android 7.0+, arm64 phones; side-load, test-key signed).
+**📦 Download the Android APK:** [Icebreaker-Unofficial-v1.0.0.apk](https://github.com/itsrog97/ice-breaker-unofficial-app/raw/main/releases/v1.0.0/Icebreaker-Unofficial-v1.0.0.apk) (Android 7.0+, arm64 phones; side-load, test-key signed; [checksum](releases/v1.0.0/SHA256SUMS.txt)) · [release notes](releases/v1.0.0/RELEASE_NOTES.md) · [design-review PDF](releases/v1.0.0/Icebreaker_Android_UIUX_Review_v1.0.0.pdf)
 
 ---
 
