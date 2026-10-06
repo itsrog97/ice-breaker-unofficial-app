@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Icebreaker (Unofficial)",
+    "slug": "icebreaker-mobile",
+    "version": "1.0.0",
+    "scheme": "icebreaker",
+    "orientation": "default",
+    "icon": "./assets/app-icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "io.github.itsrog97.icebreakerunofficial"
+    },
+    "android": {
+      "package": "io.github.itsrog97.icebreakerunofficial",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "backgroundColor": "#1c4466",
+        "foregroundImage": "./assets/app-icon.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false,
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-image",
+      "expo-font",
+      "expo-web-browser",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/app-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#1c4466"
+        }
+      ],
+      "expo-asset",
+      "./plugins/withReleaseSigning",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "useLegacyPackaging": true,
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-dontobfuscate\n-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod\n"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
