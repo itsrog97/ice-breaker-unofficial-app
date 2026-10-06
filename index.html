@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icebreaker (Unofficial) – Live Demo</title>
+<meta name="description" content="Live web demo of an unofficial Android client for Icebreaker, built as a product-management case study. Fictional demo data.">
+<link rel="icon" href="app/favicon.ico">
+<style>
+  :root { --blue:#255b7d; --navy:#0d3350; --t2:#5f6469; --bd:#dcdee0; --bg:#f3f7fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:#0e1216; background: var(--bg); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 48px; display: grid; grid-template-columns: 1fr 440px; gap: 48px; align-items: start; }
+  .tag { display:inline-block; font-size:12px; font-weight:700; letter-spacing:1px; color:var(--blue); border:1.5px solid var(--blue); border-radius:5px; padding:2px 7px; }
+  h1 { font-size: 40px; line-height:1.1; color: var(--navy); margin: 14px 0 12px; letter-spacing:-.5px; }
+  p.lead { font-size: 17px; line-height: 1.55; color: var(--t2); margin: 0 0 22px; }
+  .btns { display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 26px; }
+  a.btn { text-decoration:none; font-weight:600; font-size:15px; padding: 11px 18px; border-radius: 12px; border:1.5px solid var(--blue); color: var(--blue); background:#fff; }
+  a.btn.primary { background: var(--blue); color:#fff; }
+  .card { background:#fff; border:1px solid var(--bd); border-radius:16px; padding:18px 20px; margin-bottom:16px; }
+  .card h2 { font-size:15px; margin:0 0 8px; color:var(--navy); }
+  .card ul { margin:0; padding-left:18px; color:var(--t2); font-size:14.5px; line-height:1.6; }
+  .note { font-size:12.5px; color:var(--t2); line-height:1.5; }
+  .phone { position: sticky; top: 24px; justify-self: center; width: 412px; height: min(880px, calc(100vh - 48px)); background:#111417; border-radius: 40px; padding: 12px; box-shadow: 0 24px 60px rgba(0,30,60,.25); }
+  .phone iframe { width:100%; height:100%; border:0; border-radius: 30px; background:#fff; }
+  .full { text-align:center; margin-top:10px; font-size:13px; }
+  .full a { color: var(--blue); }
+  @media (max-width: 960px) {
+    .wrap { grid-template-columns: 1fr; }
+    .phone { position: static; width: min(412px, 100%); height: 820px; }
+  }
+  @media (max-width: 480px) {
+    .phone { padding: 0; border-radius: 0; background: none; box-shadow:none; height: 90vh; }
+    .phone iframe { border-radius: 0; border:1px solid var(--bd); }
+    h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <span class="tag">UNOFFICIAL · PORTFOLIO PROJECT</span>
+    <h1>Icebreaker, reimagined as a native Android app</h1>
+    <p class="lead">A product-management case study: I audited the Icebreaker web product, wrote a mobile MVP spec, redesigned the experience for one-handed use, and shipped a working React Native app. Try it live on the right. It runs on <b>fictional demo data</b>, so no account is needed.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/itsrog97/ice-breaker-unofficial-app">View the case study &amp; code</a>
+      <a class="btn" href="https://github.com/itsrog97/ice-breaker-unofficial-app/releases/tag/v1.0.0">Download the Android APK</a>
+      <a class="btn" href="https://github.com/itsrog97/ice-breaker-unofficial-app/blob/main/docs/design-review/Icebreaker_Android_UIUX_Review_v1.0.0.pdf">UI/UX review PDF</a>
+    </div>
+    <div class="card"><h2>Try this in the demo</h2><ul>
+      <li>Tap <b>Sign In</b> (credentials are pre-filled)</li>
+      <li><b>Discover</b>: search “founder”, open the Industry filter</li>
+      <li>Open a profile → read the reasons to connect → <b>Break the Ice</b> → send a message</li>
+      <li><b>Spark</b>: tap “Find relevant people”, then “Draft an opener”</li>
+      <li><b>Chat</b>: join the Marketing channel; open #Product Management</li>
+      <li><b>Settings</b> (gear icon): switch on Dark Mode</li>
+    </ul></div>
+    <div class="card"><h2>What I did as the PM</h2><ul>
+      <li>Audited 13 routes and ~30 features; ranked them P0–P3</li>
+      <li>Defined the MVP vs Phase 2 scope and non-functional requirements</li>
+      <li>Redesigned navigation: bottom tabs, bottom-sheet filters, sticky primary action</li>
+      <li>Ran QA: 45 automated tests, scripted walkthroughs, failure-mode tests on 5 screen sizes</li>
+    </ul></div>
+    <p class="note">Independent project, not affiliated with, endorsed or sponsored by Icebreaker Connect, Inc. The demo is the app’s own code running in the browser; the Android build connects to the real service with a member’s own account. Implementation pair-programmed with an AI coding assistant under my product direction.</p>
+  </div>
+  <div>
+    <div class="phone"><iframe src="app/" title="Icebreaker unofficial app demo" allow="clipboard-write"></iframe></div>
+    <div class="full"><a href="app/" target="_blank" rel="noopener">Open the demo full-screen ↗</a></div>
+  </div>
+</div>
+</body>
+</html>
